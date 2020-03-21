@@ -1,0 +1,6 @@
+*.rdp
+*.rdb
+*.CSV
+*.csv
+*.pyc
+.vscode/launch.json

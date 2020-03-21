@@ -1,0 +1,16 @@
+beautifulsoup4==4.8.2
+bs4==0.0.1
+certifi==2018.1.18
+chardet==3.0.4
+cheroot==8.2.1
+CherryPy==18.5.0
+decorator==4.3.0
+idna==2.6
+lxml==4.4.2
+pexpect==4.5.0
+pytz==2019.3
+redis==3.3.11
+requests==2.18.4
+six==1.13.0
+tempora==2.0.0
+urllib3==1.22
