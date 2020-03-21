@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 '''
+INTERMEDIATE
 Cross Game or Tic-Tac-Toe Game
 a. Desc -> Write a Program to play a Cross Game or Tic-Tac-Toe Game. Player 1 is the 
 Computer and the Player 2 is the user. Player 1 take Random Cell that is the Column 

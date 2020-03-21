@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 '''
+BEGINNER
 2. Simulate Stopwatch Program
 a. Desc -> Write a Stopwatch Program for measuring the time that elapses between the 
 start and end clicks

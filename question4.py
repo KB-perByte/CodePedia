@@ -1,5 +1,6 @@
-
+#!/usr/bin/python3
 '''
+INTERMEDIATE
 Take a string from user at runtime. Check that using those characters of string is it 
 possibletomakeapalindromestring?Ifyesthenprint thepalindromestring.
 E.g. abcde O/p: palindrome not possible.
