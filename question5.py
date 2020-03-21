@@ -11,7 +11,7 @@ class Node:
     def __init__(self, data): 
         self.data = data 
         self.next = None
-        
+
 class LinkedList: 
     def __init__(self): 
         self.head = None
@@ -51,13 +51,10 @@ class LinkedList:
             return 
         self.reverseUtil(self.head, None) 
     
-    def printReverse(self,head): 
-        stk = [] 
+    def reverseStack(self,head): 
+        stk = [] # a stack basically print by -1
         ptr = head 
         while (ptr != None):  
             stk.append(ptr) 
             ptr = ptr.next
-        while (len(stk) > 0): 
-            print( stk[-1].data, end = " ") 
-            stk.pop() 
-        print( " ") 
+        return stk
