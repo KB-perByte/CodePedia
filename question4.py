@@ -6,6 +6,7 @@ possibletomakeapalindromestring?Ifyesthenprint thepalindromestring.
 E.g. abcde O/p: palindrome not possible.
 E.g. abcabc O/p: palindrome possible. abccba
 '''
+
 NO_OF_CHARS = 256
 stir = ''
 

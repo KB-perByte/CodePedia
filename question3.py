@@ -10,7 +10,6 @@ c. Logic -> The User or the Computer can only take the unoccupied cell. The Game
 played till either wins or till draw...
 d. O/P -> Print the Col and the Cell after every step.
 e. Hint -> The Hints is provided in the Logic. Use Functions for the Logic...
-
 '''
 import random
 import sys
