@@ -10,9 +10,6 @@ def main():
 	a.sort(reverse=True)
 	stdout.write(str(max(x * (i + 1) for i, x in enumerate(a))))
 
-    for i, x in enumerate(a):
-        y = max(x*(i+1))
-
 main()    
 
 
