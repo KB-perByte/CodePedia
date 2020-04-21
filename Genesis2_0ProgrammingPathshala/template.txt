@@ -1,0 +1,15 @@
+#shebang
+#type of problem
+
+def methordToCall(arr, _someInput, _otherInput):
+    return True
+    pass
+
+def main():
+    totalTestcase = int(input())
+    for testcase in range(totalTestcase):
+        arr = []
+        _someInput = int(input())
+        _otherInput = int(input()) 
+        arr = list(map(int,input().split())) #space seperaed list input
+        methordToCall(arr, _someInput, _otherInput)

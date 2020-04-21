@@ -1,3 +1,5 @@
+#Homework Array-1
+
 def checkInclusion(s1, s2):    
     subStr = [ord(x) - ord('a') for x in s1]
     mainStr = [ord(x) - ord('a') for x in s2]
