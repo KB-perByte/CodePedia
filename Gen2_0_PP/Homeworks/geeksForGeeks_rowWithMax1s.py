@@ -38,15 +38,18 @@ while(testCases):
         ans = 0
         pos = a[1]
 
-        for k in range(a[0]):
+        if idx == 0 and idxl == 0:
+            return -1
 
+        for k in range(a[0]):
+            
             if binB[idx:idxl][0] == 1:
                 return k
             
             if pos == 0:
                 return k-1
 
-            x = indexOfFirstOne(binB[idx:idxl], 0, 3)
+            x = indexOfFirstOne(binB[idx:idxl], 0, a[1]-1)
             
             if x < pos and x != -1:
                 pos = x
