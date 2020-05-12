@@ -21,6 +21,7 @@ def binarySearchRec(array, l, r, toSearch): #recusive and crazy approach
     else: 
         return -1
 
+#this is cpp in py
 int BinarySearch(int A[], int l, int r, int key) 
 { 
 	int m; 
