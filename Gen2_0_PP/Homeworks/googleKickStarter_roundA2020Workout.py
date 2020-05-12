@@ -2,18 +2,18 @@ import math
 T=int(input())
 for i in range(T):
     N,K=[int(s) for s in input().split(" ")] 
-    session=[int(s) for s in input().split(" ")]
-    sess_diff=[session[x+1]-session[x] for x in range(len(session)-1)]
+    sesn=[int(s) for s in input().split(" ")]
+    sess_diff=[sesn[x+1]-sesn[x] for x in range(len(sesn)-1)]
     
-    di_max=max(sess_diff)
-    ll=1
-    rr=di_max
-    while ll<rr: 
-        mid=int((ll+rr)/2)
+    maxDiff=max(sess_diff)
+    low=1
+    high=maxDiff
+    while low<high: 
+        mid=int((low+high)/2)
         if sum(map(lambda x: math.ceil(x/mid)-1,sess_diff)) <= K:
-            rr=mid
+            high=mid
         else:
-            ll=mid+1 
-    ans=ll
+            low=mid+1 
+    ans=low
 
     print("Case #{}: {}".format(i+1, ans)) 
