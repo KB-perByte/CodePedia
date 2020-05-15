@@ -1,3 +1,4 @@
+#binary search on answer
 class Solution:
     def removeKdigits(self, num: str, k: int) -> str:
         n, j = list(num), k

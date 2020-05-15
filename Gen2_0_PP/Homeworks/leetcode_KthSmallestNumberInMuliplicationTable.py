@@ -1,3 +1,4 @@
+#binary search on answer
 class Solution:
     def findKthNumber(self, m: int, n: int, k: int) -> int:
         lo, hi = 0, m * n
