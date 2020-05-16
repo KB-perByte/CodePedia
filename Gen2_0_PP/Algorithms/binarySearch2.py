@@ -41,27 +41,27 @@ def binSearch2D(arr, element):
 
 print(binSearch2D(matrix,7))
 
-def searchmatrix2D(matrix, target)
+def searchmatrix2D(matrix, target):
     res = False
-    rows = len(matrix)
-    if rows < 1:
+    row = len(matrix)
+    if row < 1:
         return res
     
-    cols = len(matrix[0])
-    if cols < 1:
+    col = len(matrix[0])
+    if col < 1:
         return res
     
     if (target < matrix[0][0]) or (target > matrix[-1][-1]):
         return res
     
-    lo, hi = 0, rows * cols
-    while lo < hi:
-        mid = lo + (hi - lo) // 2
-        num = matrix[mid // cols][mid % cols]
-        if num > target:
-            hi = mid
-        elif num < target:
-            lo = mid + 1
+    low, high = 0, row * col
+    while low < high:
+        middle = low + (high - low) // 2
+        n = matrix[middle // col][middle % col]
+        if n > target:
+            high = middle
+        elif n < target:
+            low = middle + 1
         else:
             return True
     return res
