@@ -65,17 +65,14 @@ Output:
 
 '''
 
-
-
-#TODO
 from fractions import Fraction
 
 def gcd(x, y):
-    def gcd1(x, y):
+    def _gcd(x, y):
         if y == 0:
             return x
-        return gcd1(y, x%y)
-    return gcd1(abs(x), abs(y))
+        return _gcd(y, x%y)
+    return _gcd(abs(x), abs(y))
 
 def simplify(x, y):
     g = gcd(x, y)
@@ -84,7 +81,7 @@ def simplify(x, y):
 def lcm(x, y):
     return long(x*y/gcd(x,y))
 
-def transform(mat):
+def matrixTransform(mat):
     sum_list = list(map(sum, mat))
     bool_indices = list(map(lambda x: x == 0, sum_list))
     indices = set([i for i, x in enumerate(bool_indices) if x])
@@ -112,12 +109,12 @@ def transform(mat):
     return [tmat, len(zeros_mat)]
 
 def copy_mat(mat):
-    cmat = []
+    copyOfMartix = []
     for i in range(len(mat)):
-        cmat.append([])
+        copyOfMartix.append([])
         for j in range(len(mat[i])):
-            cmat[i].append(Fraction(mat[i][j].numerator, mat[i][j].denominator))
-    return cmat
+            copyOfMartix[i].append(Fraction(mat[i][j].numerator, mat[i][j].denominator))
+    return copyOfMartix
 
 def gauss_elmination(m, values):
     mat = copy_mat(m)
@@ -128,7 +125,7 @@ def gauss_elmination(m, values):
                 index = j
                 break
         if index == -1:
-            raise ValueError('Gauss elimination failed!')
+            raise ValueError
         mat[i], mat[index] = mat[index], mat[j]
         values[i], values[index] = values[index], values[i]
         for j in range(i+1, len(mat)):
@@ -165,7 +162,7 @@ def inverse(mat):
         mat_inv.append(gauss_elmination(tmat, values))
     return mat_inv
 
-def mat_mult(mat1, mat2):
+def matrixMuliplication(mat1, mat2):
     res = []
     for i in range(len(mat1)):
         res.append([])
@@ -184,13 +181,13 @@ def splitQR(mat, lengthR):
         R.append(mat[i][lengthQ:])
     return [Q, R]
 
-def answer(mat):
-    res = transform(mat)
-    if res[1] == len(mat):
+def solution(m):
+    res = matrixTransform(m)
+    if res[1] == len(m):
         return [1, 1]
     Q, R = splitQR(*res)
     inv = inverse(Q)
-    res = mat_mult(inv, R)
+    res = matrixMuliplication(inv, R)
     row = res[0]
     l = 1
     for item in row:
