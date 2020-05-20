@@ -1,6 +1,7 @@
+#inary serach mininmize on decreasing array
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-         def funct(divisor):
+        def funct(divisor):
             return sum(math.ceil(n / divisor) for n in nums)
             
         l, h = 1, max(nums)

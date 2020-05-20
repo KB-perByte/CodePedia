@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+#maximize , increasing monotonic funtion
 cost = 0
     
 n, s = map(int, input().split())
