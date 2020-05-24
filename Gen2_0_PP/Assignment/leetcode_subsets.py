@@ -6,7 +6,7 @@ class Solution(object):
         """
         res = []
         def recSubsets(nums,res,start,end,lst):
-            print('x')
+            #print('x')
             res.append(lst)
             if start == end:
                 return
