@@ -7,39 +7,12 @@ import re
 import sys
 
 # Complete the superDigit function below.
-ans = 0 
-ans2 = 0
-
 def superDigit(n, k):
-    global ans
-
-    def sumMe(n):
-        global ans2
-        ans2 += (n % 10)
-        if n == 0:
-            return
-        sumMe(n//10)
-
-    def computeN(n, k):
-        global ans
-        global ans2
-        k-=1
-        if k == 0: 
-            return 
-        sumMe(n)
-        ans+=ans2
-        computeN(n, k)
-    
-    computeN(n, k)
-
-    def finalcomp(ans):
-        if ans//10 == 0:
-            return ans
-        sumMe(ans)
-        finalcomp(ans)
-    
-    finalcomp(ans)
-    return ans
+    sumEach = (sum(int(i) for i in n) * k)
+    if sumEach < 10:
+            return sumEach
+    else:
+            return superDigit(str(sumEach), 1)
 
 '''
 if __name__ == '__main__':
@@ -53,3 +26,17 @@ if __name__ == '__main__':
 '''
 
 print(superDigit(148, 3))
+
+'''integer based approach '''
+def digSum(n): 
+	if n == 0: 
+		return 0
+	return (n % 9 == 0) and 9 or (n % 9) 
+
+def repeatedNumberSum(n, x): 
+	sum = x * digSum(n) 
+	return digSum(sum) 
+
+n = 24; x = 3
+print(repeatedNumberSum(n, x)) 
+''' end '''
