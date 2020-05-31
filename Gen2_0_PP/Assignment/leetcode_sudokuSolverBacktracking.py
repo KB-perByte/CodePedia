@@ -8,8 +8,6 @@ class Solution:
                 nums.append(s)
         return nums
     
-    
-    
     def init(self, board, emptyPos, rows, columns, sub_boxes):
         ## fill rows, columns, sub_boxes and emptyPos keys
         for i in range(9):
@@ -23,8 +21,7 @@ class Solution:
                 else:
                     emptyPos.append((i,j))
         return
-        
-        
+           
     def solveSudoku(self, board: List[List[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.
