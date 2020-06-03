@@ -30,10 +30,11 @@ def helper(i):
     if i > m:
         return
 
+    print(ans)
     ans.append(i * 2)
     helper(i * 2)
     ans.pop()
-    
+    print(ans)
     ans.append(i * 10 + 1)
     helper(i * 10 + 1)
     ans.pop()
