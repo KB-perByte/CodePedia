@@ -1,4 +1,4 @@
-''' Question 2 - contest 3
+/* Question 2 - contest 3
 Siddhant likes Permutations and Combinations.
 
 Aware of his interests, his Math professor asks him a simple question.
@@ -35,5 +35,52 @@ Sample Input 0
 Sample Output 0
 
 2
-'''
+*/
 
+#include<bits/stdc++.h>
+using namespace std;
+
+int func(int *arr,int n,int k)
+{
+    int curr_sum=arr[0];
+    int start=0;
+    int ans=0;
+    for(int i=1;i<n;i++)
+    {
+        while(curr_sum>k)
+        {
+            curr_sum-=arr[start];
+            start++;
+        }
+        if(curr_sum==k)
+        {
+            ans++;
+        }
+        curr_sum+=arr[i];
+
+    }
+    while(curr_sum>k)
+        {
+            curr_sum-=arr[start];
+            start++;
+        }
+    if(curr_sum==k)
+    {
+        ans++;
+    }
+    return ans;
+}
+
+int main(int argc, char const *argv[])
+{
+    int n,k;
+    cin>>n>>k;
+    int *arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<func(arr,n,k)<<endl;
+    delete [] arr;
+    return 0;
+}

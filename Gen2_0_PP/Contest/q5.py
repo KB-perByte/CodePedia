@@ -30,11 +30,12 @@ Sample Output 0
 
 1
 '''
+#old code 
+'''
+R = 3
+C = 3
 
-R = 4
-C = 4
-
-def countPaths(maze): 
+def bondQues(maze): 
 	if (maze[0][0] == -1): 
 		return 0
 
@@ -71,5 +72,54 @@ if __name__ == '__main__':
 			[0, -1, 0, 0], 
 			[-1, 0, 0, 0], 
 			[0, 0, 0, 0 ]] 
-	print(countPaths(maze)) 
+	print(bondQues(maze)) 
 
+'''
+
+def isValidCell(x, y):
+    return not (x < 0 or y < 0 or x >= N or y >= N)
+
+def bondPaths(maze, x, y, visited, count):
+    print(x,y)
+    if x == N - 1 and y == N - 1:
+        return count + 1
+
+    visited[x][y] = True
+    if isValidCell(x, y) and maze[x][y] == 1:
+        if x + 1 < N and not visited[x + 1][y]:
+            count = bondPaths(maze, x + 1, y, visited, count)
+
+        if x - 1 >= 0 and not visited[x - 1][y]:
+            count = bondPaths(maze, x - 1, y, visited, count)
+
+        if y + 1 < N and not visited[x][y + 1]:
+            count = bondPaths(maze, x, y + 1, visited, count)
+
+        if y - 1 >= 0 and not visited[x][y - 1]:
+            count = bondPaths(maze, x, y - 1, visited, count)
+
+    visited[x][y] = False
+    return count
+
+def split(word): 
+    return [1 if char == 'X' else 0 for char in word]  
+
+t = int(input())
+while(t):
+    t-=1
+    maze = []
+    N = int(input())
+    for i in range(N):
+        maze.append(split(input()))
+    count = 0
+    visited = [[False for x in range(N)] for y in range(N)]
+    count = bondPaths(maze, 0, 0, visited, count)
+
+    print(count)
+    '''
+    maze = [
+        [ 1, 1, 1] ,
+        [ 1, 0, 0] ,
+        [ 1, 1, 1] ,
+    ]
+    '''
