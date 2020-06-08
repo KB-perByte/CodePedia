@@ -57,3 +57,21 @@ Sample Case 2:
 
 The second bidding takes place at t=4 and the next bidding takes place at t=8. So, to be the third bidder (as k=3), Debrup must bid between t=5 and t=7 (both inclusive).
 '''
+
+inp = list(map(int, input().split()))
+arr = []
+for i in range(inp[0]-1):
+    arr.append(int(input()))
+
+arr.sort()
+if inp[0] > 0 and inp[1] > 0:
+    if inp[1] == 1:
+        ans1 = 0
+    else:
+        ans1 = arr[inp[1]-2]+1
+
+    if inp[1] == inp[0]:
+        ans2 = 1000000
+    else:
+        ans2 = arr[inp[1]-1]-1
+    print(ans1 , ans2)

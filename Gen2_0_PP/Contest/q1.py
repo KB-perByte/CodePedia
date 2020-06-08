@@ -39,3 +39,17 @@ Explanation 1
 
 59 is itself a valid fee value as it has equal number of 5 and 9 in it.
 '''
+
+def findRec(res, a, x, b, y, n): 
+	if (res > 1e11): 
+		return 1e11
+	if (x == y and res >= n): 
+		return res 
+	return min(findRec(res * 10 + a, a, x + 1, b, y, n), findRec(res * 10 + b, a, x, b, y + 1, n)) 
+
+def numFunc(n, a, b): 
+	ans, x, y= 0 ,0 ,0
+	return findRec(ans, a, x, b, y, n) 
+
+N = int(input())
+print(numFunc(N, 5, 9)) 

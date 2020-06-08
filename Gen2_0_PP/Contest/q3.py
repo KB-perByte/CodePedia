@@ -33,3 +33,40 @@ Sample Output 0
 YES
 NO
 '''
+
+
+def anotherPalindrome1(str1): 
+	i = 0
+	j = len(str1) - 1
+	str1 = list(str1) 
+	while (i <= j): 
+		if (str1[i] == '?' and str1[j] == '?'): 
+			str1[i] = 'a'
+			str1[j] = 'a'
+
+		elif (str1[j] == '?'): 
+			str1[j] = str1[i] 
+
+		elif (str1[i] == '?'): 
+			str1[i] = str1[j] 
+
+		elif (str1[i] != str1[j]): 
+			str1 = '' . join(str1) 
+			return "NO"
+
+		i += 1
+		j -= 1
+
+	str1 = '' . join(str1) 
+	return str1 
+
+t = int(input())
+while(t):
+    t-=1
+    n = int(input())
+    str1 = str(input())
+    x = anotherPalindrome1(str1)
+    if x != 'NO':
+        print('YES')
+    else:
+        print('NO')
