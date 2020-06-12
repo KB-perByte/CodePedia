@@ -41,6 +41,7 @@ Explanation 1
 '''
 
 def findRec(res, a, x, b, y, n): 
+	print('hey', res,x, y)
 	if (res > 1e11): 
 		return 1e11
 	if (x == y and res >= n): 
