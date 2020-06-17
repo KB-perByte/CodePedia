@@ -40,8 +40,17 @@ Explanation 1
 59 is itself a valid fee value as it has equal number of 5 and 9 in it.
 '''
 
+import math 
+
+def countDigit(n): 
+	return math.floor(math.log(n, 10))
+
 def findRec(res, a, x, b, y, n): 
-	print('hey', res,x, y)
+	f = open("Gen2_0_PP/Contest/output.txt", "+a")
+	ss = 'res->' + str(res) + ' a->' + str(a) + ' x->' + str(x) + ' b->' +  str(b) + ' y->' + str(y) + ' n->' + str(n)+'\n'
+	f.write(ss)
+	f.close()
+	#print(res, a, x, b, y, n)
 	if (res > 1e11): 
 		return 1e11
 	if (x == y and res >= n): 
@@ -54,3 +63,4 @@ def numFunc(n, a, b):
 
 N = int(input())
 print(numFunc(N, 5, 9)) 
+
