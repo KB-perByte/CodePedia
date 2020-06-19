@@ -1,4 +1,6 @@
-import functools
+class Solution:
+    def largestNumber(self, nums: List[int]) -> str:
+        import functools
         def comparator(s1, s2):
             if int(s1+s2) < int(s2+s1):
                 return -1

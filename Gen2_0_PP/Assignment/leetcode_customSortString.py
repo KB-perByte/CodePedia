@@ -5,14 +5,11 @@ class Solution(object):
         :type T: str
         :rtype: str
         """
-        def f(ele):
-            if ele in S:
-                return S.index(ele)  # As the sorting algorithm is based on the order in which they occur. We can use the index of the character
+        def compFunc(ele):
+            if e in S:
+                return S.index(e)
             return -1
         
-        T = list(T)
-        S = list(S)
-        
-        
-        T.sort(key=f)
+        T,S = list(T), list(S)
+        T.sort(key=compFunc)
         return ''.join(T)
