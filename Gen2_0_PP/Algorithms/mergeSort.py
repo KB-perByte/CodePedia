@@ -60,7 +60,6 @@ def mergeSort(arr,l,r):
 		mergeSort(arr, m+1, r) 
 		merge(arr, l, m, r) 
 
-
 # Driver code to test above 
 arr = [12, 11, 13, 5, 6, 7] 
 n = len(arr) 
