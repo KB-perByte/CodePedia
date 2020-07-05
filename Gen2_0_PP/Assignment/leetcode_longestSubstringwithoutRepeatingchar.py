@@ -1,13 +1,13 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        ans,n,i,j=0,len(s),0,0
-        Set = set()
-        while i<n and j<n:
-            if s[j] not in Set:
-                Set.add(s[j]) #if character is unique add to set
-                j+=1
-                ans=max(ans,j-i) #maximize the length (i,j)
+        ans,n,x,y=0,len(s),0,0
+        arr = set()
+        while x<n and y<n:
+            if s[y] not in arr:
+                arr.add(s[y]) 
+                y+=1
+                ans=max(ans,y-x) 
             else:
-                Set.remove(s[i]) #if character isn't unique remove from set
-                i+=1 #reduce the interval length
+                arr.remove(s[x]) 
+                x+=1 
         return ans
