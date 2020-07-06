@@ -41,3 +41,32 @@ The pair [4,9] and [8,10] is one such pair which will enjoy sessions together.
 
 Similarly, pair [4,9] and [6,7] is second such pair
 '''
+
+maxNum = float('-inf')
+maxVal = 10**6
+
+arr = [0] * maxVal
+queries = int(input())
+maxVal = 0
+while(queries):
+    queries-=1
+    #print('value of L and R till which each element will be incremeted by 1:')
+    inp = list(map(int, input().split()))
+    arr[inp[0]]+=1
+    arr[inp[1]+1]-=1
+    maxVal = max(inp) if max(inp) >= maxVal else maxVal
+
+print(max[arr])
+#print('Get i.th value:')
+sum = 0
+for x in range(maxVal):
+    sum += arr[x]
+
+print(sum)
+
+
+
+    
+
+
+
