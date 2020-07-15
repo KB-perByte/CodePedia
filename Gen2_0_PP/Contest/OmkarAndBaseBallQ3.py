@@ -73,20 +73,20 @@ for _ in range(t):
 			
 #try 3
 t = int(input())
-for hatt in range(t):
+for _ in range(t):
 	n = int(input())
 	a = [int(num) for num in input().split()]
-	coun = 0
+	cnt = 0
 	if(a[0]==1):
 		prev = True
 	else:
-		coun=1
+		cnt=1
 		prev = False
 	for i in range(1,n):
 		if(a[i]==i+1):
 			prev = True
 		else:
 			if prev:
-				coun+=1
+				cnt+=1
 			prev = False
-	print(min(coun,2))
+	print(min(cnt,2))
