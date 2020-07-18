@@ -67,11 +67,11 @@ def countSetBits(x) :
  Find log base 2 of 32 bit integer
 '''
 def log2(x): 
-	res = 0 
-	while (x >>= 1):
-		res+=1
-	return res 
- 
+    res = 0 
+    while (x >>= 1):
+        res+=1
+    return res 
+
 '''
 x = 16(000100000)
 x – 1 = 15(00001111)
