@@ -29,3 +29,28 @@ int  main(){
   }
   return 0;
   
+
+
+
+//-------------------------------------------------------------------
+
+#include <cstdio>
+typedef long long ll;
+const int N = 262144;
+int c[N];
+int main() {
+    int t, i, p; ll d; char op;
+    scanf("%d", &t);
+    while (t--) {
+        for (op = getchar(); op == '\n'; op = getchar());
+        scanf("%I64d", &d);
+        for (i = p = 0; i < 18; ++i)
+            p |= ((d % 10) & 1) << i, d /= 10;
+        switch(op) {
+        case '+': ++c[p]; break;
+        case '-': --c[p]; break;
+        case '?': printf("%d\n", c[p]); break;
+        }
+    }
+    return 0;
+}
