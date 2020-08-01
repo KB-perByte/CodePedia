@@ -6,7 +6,20 @@
 	],
 	"settings": {
 		"files.associations": {
-			"iterator": "cpp"
+			"iterator": "cpp",
+			"__node_handle": "cpp",
+			"__split_buffer": "cpp",
+			"array": "cpp",
+			"deque": "cpp",
+			"list": "cpp",
+			"map": "cpp",
+			"queue": "cpp",
+			"set": "cpp",
+			"stack": "cpp",
+			"string": "cpp",
+			"string_view": "cpp",
+			"unordered_map": "cpp",
+			"vector": "cpp"
 		}
 	}
 }
