@@ -20,6 +20,7 @@
 			"string_view": "cpp",
 			"unordered_map": "cpp",
 			"vector": "cpp"
-		}
+		},
+		"editor.fontFamily": "Hack"
 	}
 }
